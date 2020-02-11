@@ -1,0 +1,8 @@
+<div class="">
+  <p>{{this.question.ask}}</p>
+  <fieldset *ngFor="let ans of this.question.possibleAnswer; let i = index" (change)="onSelected(ans)">
+    <input type="radio" name="ans" id="{{i}}">
+    <label for="{{i}}">{{ans}}}</label>
+  </fieldset>
+  <input type="button" value="responder" (click)="check()">
+</div>

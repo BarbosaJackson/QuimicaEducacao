@@ -1,0 +1,16 @@
+<div *ngIf="this.quiz.text && this.questionPos < this.quiz.questions.length">
+  <p>{{this.quiz.text}}</p>
+</div>
+
+<div *ngIf="this.questionPos < this.quiz.questions.length" [hidden]="this.questionPos + 1 > this.quiz.questions.length">
+  <p>{{this.quiz.questions[this.questionPos].ask}}</p>
+  <fieldset *ngFor="let ans of this.quiz.questions[questionPos].possibleAnswer; let i = index" (change)="onSelected(ans)">
+    <input type="radio" name="ans" id="{{i}}">
+    <label for="{{i}}">{{ans}}</label>
+  </fieldset>
+  <input type="button" value="responder" (click)="check()">
+</div>
+<div *ngIf="this.questionPos == this.quiz.questions.length">
+  <p>você fez {{this.points}} ponto(s), parabéns!!!</p>
+  <input type="button" value="finalizar" (click)="sendData()">
+</div>

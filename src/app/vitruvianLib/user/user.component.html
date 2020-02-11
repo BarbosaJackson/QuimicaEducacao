@@ -1,0 +1,19 @@
+<app-menu [username]="user.username"></app-menu>
+<div>
+  <h1>olá, {{user.username}}</h1>
+  <p>Você tem um total de {{user.points}} ponto(s)</p>
+</div>
+<div>
+  <h1>Tarefas</h1>
+  <div *ngFor="let quiz of this.quizService.quizzes; let i = index" style="display: inline-block; padding-left: 10px;">
+      <div class="col-sm-6">
+        <a routerLink="tasks/{{quiz.id}}">
+        <div class="card">
+          <div class="container-title">
+            <h4>{{quiz.title}}</h4>
+          </div>
+        </div>
+        </a>
+      </div>
+  </div>
+</div>

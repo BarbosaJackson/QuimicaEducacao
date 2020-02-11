@@ -1,0 +1,11 @@
+<div class="wrapper fadeInDown">
+  <div *ngIf="wrongData">
+
+  </div>
+  <div id="formContent">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" #userName>
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" #pass>
+      <button class="fadeIn fourth" name="login" (click)="tryLogin(userName.value, pass.value)">Log In</button>
+      <input type="button" value="registrar" (click)="this.router.navigate(['/register'])">
+  </div>
+</div>

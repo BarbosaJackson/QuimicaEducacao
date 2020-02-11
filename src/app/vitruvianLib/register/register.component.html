@@ -1,0 +1,10 @@
+<div class="wrapper fadeInDown">
+<div id="formContent">
+  <div class="formContent">
+    <input type="text" #name class="fadeIn second" placeholder="Nome">
+    <input type="text" #username class="fadeIn third" placeholder="nome de usuario">
+    <input type="password" #password class="fadeIn fourth" placeholder="senha">
+    <input type="button" (click)="register(name.value, username.value, password.value)" value="cadastrar">
+  </div>
+</div>
+</div>

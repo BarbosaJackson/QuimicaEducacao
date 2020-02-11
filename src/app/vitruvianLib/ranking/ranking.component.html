@@ -1,0 +1,15 @@
+<app-menu [username]="username"></app-menu>
+<h1>ranking</h1>
+<div class="container-fluid" *ngFor="let user of users; let i = index">
+  <div class="row">
+    <div class="col-xs-4">
+      <a>
+        <div class="card">
+          <div class="container-title">
+            <h4>{{i + 1}} - {{users[i].username}}<br>pontos:  {{users[i].points}}</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
